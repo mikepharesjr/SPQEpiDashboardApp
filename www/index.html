@@ -1,0 +1,151 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width; initial-scale=1.0">
+
+    <link rel="stylesheet" type="text/css" href="sdk/jqtouch/themes/css/jqtouch.css" />
+
+    <link rel="stylesheet" type="text/css" href="css/index.css" />
+
+    <script src="phonegap.js" type="text/javascript"></script>
+    <script src="sdk/jqtouch/src/lib/zepto.js" type="text/javascript"></script>
+    <script src="sdk/jqtouch/src/jqtouch.js" type="text/javascript"></script>
+    <!--<script src="sdk/jqtouch/extensions/jqt.themeswitcher.js" type="application/javascript"></script>-->
+
+    <script src="js/index.js" type="text/javascript"></script>
+
+    <title>SUMCO-SPQ-Epi_Dashboard</title>
+</head>
+<body>
+    <div id="oHome">
+        <div class="toolbar">
+            <h1>Epi Dashboard</h1>
+        </div>
+        <ul class="rounded">
+            <li class="arrow" onclick="goToAbout();">About</li>
+            <li class="arrow" onclick="goToMiniEpiDashboard();">Mini Epi Dashboard</li>
+            <li class="arrow" onclick="goToEmailReports();">E-mail Reports</li>
+            <!--<li class="arrow"><a href="#oUtilizationGraphs" class="slideright">Utilization Graphs</a></li>-->
+        </ul>
+        <ul class="rounded">
+            <!--<li class="arrow" onclick="asdf();">Get ip ...</li>-->
+            <li class="arrow" onclick="getCurrentAcceleration();">Acceleration get ...</li>
+            <li class="arrow" onclick="getCurrentPosition();">Location<em class="ico"><img src="img/map.png" /></em><span>Get your position.</span></li>
+            <li class="arrow" onclick="capturePhoto();">Camera<em class="ico"><img src="img/ic_action_photo.png" /></em><span>Take a photo</span></li>
+            <li class="arrow" onclick="getPhoto();">Image Gallery<em class="ico"><img src="img/4-collections-collection.png" /></em><span>Pick an existing image from gallery</span></li>
+        </ul>
+        <p>
+            <br />
+        </p>
+        <h2>External Links</h2>
+        <ul class="rounded">
+            <li class="forward"><a target="_blank" href="http://www.sumcousa.com/">SUMCO USA</a></li>
+            <li class="forward"><a target="_blank" href="https://susaowa.sumcousa.com/owa/auth/logon.aspx">SUMCO USA Webmail</a></li>
+            <li class="forward"><a target="_blank" href="https://build.phonegap.com/">Adobe® PhoneGap™</a></li>
+        </ul>
+        <p>
+            <br />
+        </p>
+        <div id="oIndividual">
+            <ul class="individual">
+                <li onclick="goToSettings();">Settings</li>
+                <li onclick="goToLog();">Log <span id="oRev"></span></li>
+            </ul>
+        </div>
+        <p>
+            <br />
+        </p>
+        <div id="oThemes" style="display: none;">
+            <ul class="individual">
+            </ul>
+        </div>
+        <p>
+            <br />
+        </p>
+        <h4 id="oWelcomeInfo">SPQ IT</h4>
+    </div>
+    <div id="oLog">
+        <div class="toolbar">
+            <h1>Log</h1>
+            <h2 onclick="goToHome('slidedown');">&nbsp;Cancel</h2>
+        </div>
+        <div>
+            <ul class="edgetoedge" id="oLogList">
+            </ul>
+        </div>
+    </div>
+    <div id="oSettings">
+        <div class="toolbar">
+            <h1>Settings</h1>
+            <h2 onclick="goToHome('slidedown');">&nbsp;Cancel</h2>
+        </div>
+        <div class="info">
+            Username and password are used to validate employment.                   
+        </div>
+        <div>
+            <ul class="edit rounded">
+                <li>
+                    <input placeholder="Username" type="text" name="oUsername" id="oUsername" onblur="checkUserName();" />
+
+                </li>
+                <li>
+                    <input placeholder="Password" type="password" name="oPassword" id="oPassword" />
+
+                </li>
+                <!--<li>Some Text <span class="toggle">
+                        <input type="checkbox" name="oASDF" id="oASDF" value="1" /></span></li>-->
+            </ul>
+            <ul class="individual">
+                <li onclick="saveSettings();">Save Changes</li>
+            </ul>
+            <div id="oSettingsInfo" class="info">
+            </div>
+        </div>
+    </div>
+    <div id="oAbout">
+        <div class="toolbar">
+            <h1>About</h1>
+            <h2 onclick="goToHome('slideright');">&nbsp;Back</h2>
+        </div>
+        <div class="info">
+            <p>SPQ Epi Dashboard App is a Android App to display the Utilization Event data from ODS. Through the JSONP protocal.</p>
+            <p>There isn't a direct connection to a database all data is passed through a WCF WebGet Service.</p>
+        </div>
+    </div>
+    <div id="oMiniEpiDashboard">
+        <div class="toolbar">
+            <h1>Mini Epi Dashboard</h1>
+            <h2 onclick="goToHome('slideright');">&nbsp;Back</h2>
+        </div>
+        <div>
+            <ul class="edgetoedge scroll" id="oMiniEpiDashboardList">
+            </ul>
+        </div>
+    </div>
+    <div id="oMiniEpiDashboardResults">
+        <div class="toolbar">
+            <h1>Results</h1>
+            <!--<span onclick="goToMiniEpiDashboard();">&nbsp;Back</span>-->
+            <h2 onclick="goToHomeThenMiniEpiDashboard();">&nbsp;Back</h2>
+        </div>
+        <div>
+            <ul class="edgetoedge scroll" id="oMiniEpiDashboardResultsList">
+            </ul>
+        </div>
+    </div>
+    <div id="oEmailReports">
+        <div class="toolbar">
+            <h1>E-mail Reports</h1>
+            <h2 onclick="goToHome('slideright');">&nbsp;Back</h2>
+        </div>
+        <div>
+            <ul class="edgetoedge scroll" id="oEmailReportsList">
+                <li class="sep">A</li>
+                <li class="arrow">Speator proof</li>
+                <li class="sep">W</li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>

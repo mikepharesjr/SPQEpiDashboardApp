@@ -1,0 +1,116 @@
+<?xml version='1.0' encoding='utf-8'?>
+<widget id="com.sumcousa.epidashboard" version="1.2.001" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+  <name short="Epi Dashboard">SPQ Epi Dashboard App</name>
+  <description>SPQ Epi Dashboard App is a Android App to display the Utilization Event data from ODS. Through the JSONP protocal.</description>
+  <author email="leslie.phares@sumcousa.com" href="http://www.sumcousa.com/location_albuq.htm">SUMCO USA SPQ</author>
+  <content src="index.html" />
+  <access origin="*" />
+  <license>
+    This is free and unencumbered software released into the public domain.
+
+    Anyone is free to copy, modify, publish, use, compile, sell, or
+    distribute this software, either in source code form or as a compiled
+    binary, for any purpose, commercial or non-commercial, and by any
+    means.
+
+    In jurisdictions that recognize copyright laws, the author or authors
+    of this software dedicate any and all copyright interest in the
+    software to the public domain. We make this dedication for the benefit
+    of the public at large and to the detriment of our heirs and
+    successors. We intend this dedication to be an overt act of
+    relinquishment in perpetuity of all present and future rights to this
+    software under copyright law.
+
+    THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
+    EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
+    MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.
+    IN NO EVENT SHALL THE AUTHORS BE LIABLE FOR ANY CLAIM, DAMAGES OR
+    OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE,
+    ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR
+    OTHER DEALINGS IN THE SOFTWARE.
+
+    For more information, please refer to http://unlicense.org/
+  </license>
+
+  <cdv:splash cdv:density="ldpi" cdv:platform="android" src="res/screen/android/screen-ldpi-portrait.png" />
+  <cdv:splash cdv:density="mdpi" cdv:platform="android" src="res/screen/android/screen-mdpi-portrait.png" />
+  <cdv:splash cdv:density="hdpi" cdv:platform="android" src="res/screen/android/screen-hdpi-portrait.png" />
+  <cdv:splash cdv:density="xhdpi" cdv:platform="android" src="res/screen/android/screen-xhdpi-portrait.png" />
+  <cdv:splash cdv:platform="blackberry" src="res/screen/blackberry/screen-225.png" />
+  <cdv:splash cdv:platform="ios" height="480" src="res/screen/ios/screen-iphone-portrait.png" width="320" />
+  <cdv:splash cdv:platform="ios" height="960" src="res/screen/ios/screen-iphone-portrait-2x.png" width="640" />
+  <cdv:splash cdv:platform="ios" height="1024" src="res/screen/ios/screen-ipad-portrait.png" width="768" />
+  <cdv:splash cdv:platform="ios" height="768" src="res/screen/ios/screen-ipad-landscape.png" width="1024" />
+  <cdv:splash cdv:platform="winphone" src="res/screen/windows-phone/screen-portrait.jpg" />
+
+  <preference name="fullscreen" value="false" />
+  <preference name="webviewbounce" value="false" />
+
+  <!--http://docs.phonegap.com/en/3.0.0/index.html-->
+
+  <!--Android Configuration http://docs.phonegap.com/en/3.0.0/guide_platforms_android_config.md.html#Android%20Configuration -->
+  <preference name="useBrowserHistory" value="true" />
+  <preference name="loadingDialog" value="Title, Message" />
+  <preference name="loadingPageDialog" value="Title, Message" />
+  <!--<preference name="errorUrl" value="file://android_asset/www/" />-->
+  <preference name="backgroundColor" value="0xFFF" />
+  <preference name="loadUrlTimeoutValue" value="20000" />
+  <preference name="keepRunning" value="true" />
+  <preference name="splashscreen" value="res/screen/android/screen-hdpi-portrait.png" />
+  <preference name="disallowOverscroll" value="true" />
+
+  <!--iOS Configuration http://docs.phonegap.com/en/3.0.0/guide_platforms_ios_config.md.html#iOS%20Configuration -->
+  <preference name="disallowOverscroll" value="false" />
+  <preference name="TopActivityIndicator" value="gray" />
+  <preference name="EnableLocation" value="false" />
+  <preference name="AutoHideSplashScreen" value="true" />
+  <preference name="FadeSplashScreen" value="true" />
+  <preference name="ShowSplashScreenSpinner" value="true" />
+  <preference name="MediaPlaybackRequiresUserAction" value="false" />
+  <preference name="AllowInlineMediaPlayback" value="false" />
+  <preference name="BackupWebStorage" value="local" />
+  <preference name="KeyboardDisplayRequiresUserAction" value="true" />
+  <preference name="SuppressesIncrementalRendering" value="false" />
+  <preference name="HideKeyboardFormAccessoryBar" value="false" />
+  <preference name="KeyboardShrinksView" value="false" />
+
+  <!--http://docs.phonegap.com/en/3.0.0/index.html-->
+
+  <icon cdv:density="ldpi" cdv:platform="android" src="res/icon/android/icon-36-ldpi.png" />
+  <icon cdv:density="mdpi" cdv:platform="android" src="res/icon/android/icon-48-mdpi.png" />
+  <icon cdv:density="hdpi" cdv:platform="android" src="res/icon/android/icon-72-hdpi.png" />
+  <icon cdv:density="xhdpi" cdv:platform="android" src="res/icon/android/icon-96-xhdpi.png" />
+
+  <icon cdv:platform="blackberry" src="res/icon/blackberry/icon-80.png" />
+  <icon cdv:platform="blackberry" cdv:state="hover" src="res/icon/blackberry/icon-80.png" />
+
+  <icon cdv:platform="ios" height="57" src="res/icon/ios/icon-57.png" width="57" />
+  <icon cdv:platform="ios" height="72" src="res/icon/ios/icon-72.png" width="72" />
+  <icon cdv:platform="ios" height="114" src="res/icon/ios/icon-57-2x.png" width="114" />
+  <icon cdv:platform="ios" height="144" src="res/icon/ios/icon-72-2x.png" width="144" />
+
+  <icon cdv:platform="webos" src="res/icon/webos/icon-64.png" />
+  <icon cdv:platform="winphone" src="res/icon/windows-phone/icon-48.png" />
+
+  <icon cdv:platform="winphone" cdv:role="background" src="res/icon/windows-phone/icon-173.png" />
+
+  <icon src="icon-512.png" />
+
+  <feature name="http://api.phonegap.com/1.0/device" />
+
+  <feature name="App">
+    <param name="android-package" value="org.apache.cordova.App" />
+  </feature>
+  <feature name="Camera">
+    <param name="android-package" value="org.apache.cordova.CameraLauncher" />
+  </feature>
+  <feature name="Accelerometer">
+    <param name="android-package" value="org.apache.cordova.AccelListener" />
+  </feature>
+  <feature name="Geolocation">
+    <param name="android-package" value="org.apache.cordova.GeoBroker" />
+  </feature>
+  <feature name="Storage">
+    <param name="android-package" value="org.apache.cordova.Storage" />
+  </feature>
+</widget>
